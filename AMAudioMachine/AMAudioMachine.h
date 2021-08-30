@@ -6,6 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NSSound+Extensions.h"
 
 //! Project version number for AMAudioMachine.
 FOUNDATION_EXPORT double AMAudioMachineVersionNumber;
