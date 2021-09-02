@@ -26,6 +26,13 @@
     // Put teardown code here. This method is called after the invocation of each test method in the class.
 }
 
+- (void)testDeviceID {
+    AudioDeviceID deviceID = [NSSound obtainDefaultOuputDevice];
+    AMAudioDevice *device = [[AMAudioDevice alloc] initWithAudioDevice:deviceID];
+    XCTAssertNotNil(device.UID);
+    XCTAssertNotNil(device.deviceName);
+}
+
 - (void)testOuputDevice {
     AudioDeviceID deviceID = [NSSound obtainDefaultOuputDevice];
     XCTAssertTrue(deviceID != kAudioObjectUnknown);
@@ -47,6 +54,13 @@
     NSString *numberString = [formatter stringFromNumber:@(volume)];
     
     XCTAssertTrue([numberString isEqual:@"0,7"]);
+}
+
+- (void)testFindDevices {
+    AMAudioDeviceFinder *finder = [AMAudioDeviceFinder new];
+    NSArray <AMAudioDevice *> *devices = [finder findDevices];
+    XCTAssertFalse([devices count] == 0);
+    XCTAssertNotNil(devices[0].deviceName);
 }
 
 - (void)testSystemVolumeMuted {

@@ -7,6 +7,9 @@
 
 #import <Cocoa/Cocoa.h>
 #import <CoreAudio/CoreAudio.h>
+#import <CoreAudio/CoreAudio.h>
+#import <AudioToolbox/AudioToolbox.h>
+#import <CoreAudioKit/CoreAudioKit.h>
 
 @interface NSSound (NSSoundSystemExtension)
 

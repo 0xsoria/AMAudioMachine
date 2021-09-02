@@ -13,7 +13,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@implementation NSSound (NSSoundSystemExtension)
+ @implementation NSSound (NSSoundSystemExtension)
 
 + (AudioDeviceID)obtainDefaultOuputDevice {
     AudioDeviceID returnData = kAudioObjectUnknown;

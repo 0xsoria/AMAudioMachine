@@ -3,8 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 54;
 	objects = {
+
+/* Begin PBXAggregateTarget section */
+		1549599426DD7AD100FF7A93 /* AMAudioMachineFramework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 1549599526DD7AD100FF7A93 /* Build configuration list for PBXAggregateTarget "AMAudioMachineFramework" */;
+			buildPhases = (
+				15BC450526DD7AF400F89334 /* ShellScript */,
+			);
+			dependencies = (
+				1549599926DD7AD700FF7A93 /* PBXTargetDependency */,
+			);
+			name = AMAudioMachineFramework;
+			productName = AMAudioMachineFramework;
+		};
+/* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
 		1549597826DD736100FF7A93 /* AMAudioMachine.docc in Sources */ = {isa = PBXBuildFile; fileRef = 1549597726DD736100FF7A93 /* AMAudioMachine.docc */; };
@@ -13,10 +28,21 @@
 		1549598426DD736100FF7A93 /* AMAudioMachine.h in Headers */ = {isa = PBXBuildFile; fileRef = 1549597626DD736100FF7A93 /* AMAudioMachine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1549599226DD781200FF7A93 /* NSSound+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1549599026DD781200FF7A93 /* NSSound+Extensions.m */; };
 		1549599326DD789500FF7A93 /* NSSound+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1549599126DD781200FF7A93 /* NSSound+Extensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15C4F6B126E014BF00120E93 /* AMAudioDeviceFinder.h in Headers */ = {isa = PBXBuildFile; fileRef = 15C4F6AF26E014BF00120E93 /* AMAudioDeviceFinder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15C4F6B226E014BF00120E93 /* AMAudioDeviceFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C4F6B026E014BF00120E93 /* AMAudioDeviceFinder.m */; };
+		15CA5DD526DFF96F00EBB389 /* AMAudioDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 15CA5DD326DFF96F00EBB389 /* AMAudioDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15CA5DD626DFF96F00EBB389 /* AMAudioDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CA5DD426DFF96F00EBB389 /* AMAudioDevice.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		1549597F26DD736100FF7A93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1549596A26DD736100FF7A93 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1549597226DD736100FF7A93;
+			remoteInfo = AMAudioMachine;
+		};
+		1549599826DD7AD700FF7A93 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1549596A26DD736100FF7A93 /* Project object */;
 			proxyType = 1;
@@ -33,6 +59,10 @@
 		1549598226DD736100FF7A93 /* AMAudioMachineTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AMAudioMachineTests.m; sourceTree = "<group>"; };
 		1549599026DD781200FF7A93 /* NSSound+Extensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSSound+Extensions.m"; sourceTree = "<group>"; };
 		1549599126DD781200FF7A93 /* NSSound+Extensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSSound+Extensions.h"; sourceTree = "<group>"; };
+		15C4F6AF26E014BF00120E93 /* AMAudioDeviceFinder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMAudioDeviceFinder.h; sourceTree = "<group>"; };
+		15C4F6B026E014BF00120E93 /* AMAudioDeviceFinder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AMAudioDeviceFinder.m; sourceTree = "<group>"; };
+		15CA5DD326DFF96F00EBB389 /* AMAudioDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMAudioDevice.h; sourceTree = "<group>"; };
+		15CA5DD426DFF96F00EBB389 /* AMAudioDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AMAudioDevice.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +107,7 @@
 			children = (
 				1549597626DD736100FF7A93 /* AMAudioMachine.h */,
 				1549599126DD781200FF7A93 /* NSSound+Extensions.h */,
+				15CA5DD726DFF97600EBB389 /* AudioDevice */,
 				1549599026DD781200FF7A93 /* NSSound+Extensions.m */,
 				1549597726DD736100FF7A93 /* AMAudioMachine.docc */,
 			);
@@ -91,6 +122,17 @@
 			path = AMAudioMachineTests;
 			sourceTree = "<group>";
 		};
+		15CA5DD726DFF97600EBB389 /* AudioDevice */ = {
+			isa = PBXGroup;
+			children = (
+				15CA5DD326DFF96F00EBB389 /* AMAudioDevice.h */,
+				15CA5DD426DFF96F00EBB389 /* AMAudioDevice.m */,
+				15C4F6AF26E014BF00120E93 /* AMAudioDeviceFinder.h */,
+				15C4F6B026E014BF00120E93 /* AMAudioDeviceFinder.m */,
+			);
+			path = AudioDevice;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -99,6 +141,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1549598426DD736100FF7A93 /* AMAudioMachine.h in Headers */,
+				15CA5DD526DFF96F00EBB389 /* AMAudioDevice.h in Headers */,
+				15C4F6B126E014BF00120E93 /* AMAudioDeviceFinder.h in Headers */,
 				1549599326DD789500FF7A93 /* NSSound+Extensions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -157,10 +201,13 @@
 					1549597C26DD736100FF7A93 = {
 						CreatedOnToolsVersion = 13.0;
 					};
+					1549599426DD7AD100FF7A93 = {
+						CreatedOnToolsVersion = 13.0;
+					};
 				};
 			};
 			buildConfigurationList = 1549596D26DD736100FF7A93 /* Build configuration list for PBXProject "AMAudioMachine" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -174,6 +221,7 @@
 			targets = (
 				1549597226DD736100FF7A93 /* AMAudioMachine */,
 				1549597C26DD736100FF7A93 /* AMAudioMachineTests */,
+				1549599426DD7AD100FF7A93 /* AMAudioMachineFramework */,
 			);
 		};
 /* End PBXProject section */
@@ -195,11 +243,33 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		15BC450526DD7AF400F89334 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nxcodebuild archive -scheme ${PROJECT_NAME} -destination \"platform=macOS\" -archivePath \"${PROJECT_DIR}/build/${PROJECT_NAME}-macOS.xcarchive\" SKIP_INSTALL=NO BUILD_LIBRARIES_FOR_DISTRIBUTION=YES\n\nxcodebuild -create-xcframework -framework \"${PROJECT_DIR}/build/${PROJECT_NAME}-macOS.xcarchive/Products/Library/Frameworks/${PROJECT_NAME}.framework\" -output \"${PROJECT_DIR}/build/${PROJECT_NAME}.xcframework\"\n\nopen \"${PROJECT_DIR}/build\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1549596F26DD736100FF7A93 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15C4F6B226E014BF00120E93 /* AMAudioDeviceFinder.m in Sources */,
+				15CA5DD626DFF96F00EBB389 /* AMAudioDevice.m in Sources */,
 				1549599226DD781200FF7A93 /* NSSound+Extensions.m in Sources */,
 				1549597826DD736100FF7A93 /* AMAudioMachine.docc in Sources */,
 			);
@@ -220,6 +290,11 @@
 			isa = PBXTargetDependency;
 			target = 1549597226DD736100FF7A93 /* AMAudioMachine */;
 			targetProxy = 1549597F26DD736100FF7A93 /* PBXContainerItemProxy */;
+		};
+		1549599926DD7AD700FF7A93 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1549597226DD736100FF7A93 /* AMAudioMachine */;
+			targetProxy = 1549599826DD7AD700FF7A93 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -346,10 +421,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
-				ARCHS = (
-					"$(ARCHS_STANDARD)",
-					armv7,
-				);
+				ARCHS = "$(ARCHS_STANDARD)";
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -360,20 +433,24 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Gabriel-Soria.AMAudioMachine";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "watchsimulator watchos macosx iphonesimulator iphoneos driverkit appletvsimulator appletvos";
+				SUPPORTED_PLATFORMS = macosx;
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 14.0;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
 			};
 			name = Debug;
 		};
@@ -381,10 +458,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
-				ARCHS = (
-					"$(ARCHS_STANDARD)",
-					armv7,
-				);
+				ARCHS = "$(ARCHS_STANDARD)";
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -395,20 +470,24 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Gabriel-Soria.AMAudioMachine";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "watchsimulator watchos macosx iphonesimulator iphoneos driverkit appletvsimulator appletvos";
+				SUPPORTED_PLATFORMS = macosx;
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 14.0;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
 			};
 			name = Release;
 		};
@@ -454,6 +533,24 @@
 			};
 			name = Release;
 		};
+		1549599626DD7AD100FF7A93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H929RNU2C4;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1549599726DD7AD100FF7A93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H929RNU2C4;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -480,6 +577,15 @@
 			buildConfigurations = (
 				1549598B26DD736100FF7A93 /* Debug */,
 				1549598C26DD736100FF7A93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1549599526DD7AD100FF7A93 /* Build configuration list for PBXAggregateTarget "AMAudioMachineFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1549599626DD7AD100FF7A93 /* Debug */,
+				1549599726DD7AD100FF7A93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
