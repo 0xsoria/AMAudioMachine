@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
     AudioObjectPropertyAddress address;
     address.mSelector = kAudioHardwarePropertyDefaultOutputDevice;
     address.mScope = kAudioObjectPropertyScopeGlobal;
-    address.mElement = kAudioObjectPropertyElementMain;
+    address.mElement = kAudioObjectPropertyElementMaster;
     
     AudioObjectID objID = kAudioObjectSystemObject;
     if (!AudioObjectHasProperty(objID, &address)) {
@@ -56,9 +56,9 @@ NS_ASSUME_NONNULL_BEGIN
     if (defaultDeviceID == kAudioObjectUnknown) {
         return 0.0;
     }
-    address.mSelector = kAudioHardwareServiceDeviceProperty_VirtualMainVolume;
+    address.mSelector = kAudioHardwareServiceDeviceProperty_VirtualMasterVolume;
     address.mScope = kAudioDevicePropertyScopeOutput;
-    address.mElement = kAudioObjectPropertyElementMain;
+    address.mElement = kAudioObjectPropertyElementMaster;
     
     if (!AudioObjectHasProperty(defaultDeviceID, &address)) {
         return 0.0;
@@ -103,7 +103,7 @@ NS_ASSUME_NONNULL_BEGIN
     
     address.mSelector = kAudioDevicePropertyMute;
     address.mScope = kAudioDevicePropertyScopeOutput;
-    address.mElement = kAudioObjectPropertyElementMain;
+    address.mElement = kAudioObjectPropertyElementMaster;
     
     muteValue = (newValue < 0.05);
     if (muteValue) {
@@ -122,7 +122,7 @@ NS_ASSUME_NONNULL_BEGIN
             canMute = false;
         }
     } else {
-        address.mSelector = kAudioHardwareServiceDeviceProperty_VirtualMainVolume;
+        address.mSelector = kAudioHardwareServiceDeviceProperty_VirtualMasterVolume;
     }
     
     if (!AudioObjectHasProperty(deviceID,
@@ -188,7 +188,7 @@ NS_ASSUME_NONNULL_BEGIN
     
     address.mSelector = kAudioDevicePropertyMute;
     address.mScope = kAudioDevicePropertyScopeOutput;
-    address.mElement = kAudioObjectPropertyElementMain;
+    address.mElement = kAudioObjectPropertyElementMaster;
     
     muted = m ? 1 : 0;
     
@@ -250,7 +250,7 @@ NS_ASSUME_NONNULL_BEGIN
     
     address.mSelector = kAudioDevicePropertyMute;
     address.mScope = kAudioDevicePropertyScopeOutput;
-    address.mElement = kAudioObjectPropertyElementMain;
+    address.mElement = kAudioObjectPropertyElementMaster;
     
     hasMute = AudioObjectHasProperty(defaultDeviceID,
                                      &address);

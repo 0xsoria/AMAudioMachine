@@ -22,6 +22,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		150F7C7726F5208700FDDF81 /* AMAudioInput.h in Headers */ = {isa = PBXBuildFile; fileRef = 150F7C7526F5208700FDDF81 /* AMAudioInput.h */; };
+		150F7C7826F5208700FDDF81 /* AMAudioInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 150F7C7626F5208700FDDF81 /* AMAudioInput.m */; };
 		1549597826DD736100FF7A93 /* AMAudioMachine.docc in Sources */ = {isa = PBXBuildFile; fileRef = 1549597726DD736100FF7A93 /* AMAudioMachine.docc */; };
 		1549597E26DD736100FF7A93 /* AMAudioMachine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1549597326DD736100FF7A93 /* AMAudioMachine.framework */; };
 		1549598326DD736100FF7A93 /* AMAudioMachineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1549598226DD736100FF7A93 /* AMAudioMachineTests.m */; };
@@ -52,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		150F7C7526F5208700FDDF81 /* AMAudioInput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMAudioInput.h; sourceTree = "<group>"; };
+		150F7C7626F5208700FDDF81 /* AMAudioInput.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AMAudioInput.m; sourceTree = "<group>"; };
 		1549597326DD736100FF7A93 /* AMAudioMachine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AMAudioMachine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1549597626DD736100FF7A93 /* AMAudioMachine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMAudioMachine.h; sourceTree = "<group>"; };
 		1549597726DD736100FF7A93 /* AMAudioMachine.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = AMAudioMachine.docc; sourceTree = "<group>"; };
@@ -110,6 +114,8 @@
 				15CA5DD726DFF97600EBB389 /* AudioDevice */,
 				1549599026DD781200FF7A93 /* NSSound+Extensions.m */,
 				1549597726DD736100FF7A93 /* AMAudioMachine.docc */,
+				150F7C7526F5208700FDDF81 /* AMAudioInput.h */,
+				150F7C7626F5208700FDDF81 /* AMAudioInput.m */,
 			);
 			path = AMAudioMachine;
 			sourceTree = "<group>";
@@ -140,6 +146,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				150F7C7726F5208700FDDF81 /* AMAudioInput.h in Headers */,
 				1549598426DD736100FF7A93 /* AMAudioMachine.h in Headers */,
 				15CA5DD526DFF96F00EBB389 /* AMAudioDevice.h in Headers */,
 				15C4F6B126E014BF00120E93 /* AMAudioDeviceFinder.h in Headers */,
@@ -269,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15C4F6B226E014BF00120E93 /* AMAudioDeviceFinder.m in Sources */,
+				150F7C7826F5208700FDDF81 /* AMAudioInput.m in Sources */,
 				15CA5DD626DFF96F00EBB389 /* AMAudioDevice.m in Sources */,
 				1549599226DD781200FF7A93 /* NSSound+Extensions.m in Sources */,
 				1549597826DD736100FF7A93 /* AMAudioMachine.docc in Sources */,

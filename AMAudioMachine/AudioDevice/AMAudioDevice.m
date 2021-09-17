@@ -24,7 +24,7 @@
     AudioObjectPropertyAddress address;
     address.mSelector = kAudioDevicePropertyDeviceUID;
     address.mScope = kAudioObjectPropertyScopeGlobal;
-    address.mElement = kAudioObjectPropertyElementMain;
+    address.mElement = kAudioObjectPropertyElementMaster;
     
     CFStringRef name = nil;
     UInt32 propsize = sizeof(CFStringRef);
@@ -46,7 +46,7 @@
     AudioObjectPropertyAddress address;
     address.mSelector = kAudioDevicePropertyDeviceNameCFString;
     address.mScope = kAudioObjectPropertyScopeGlobal;
-    address.mElement = kAudioObjectPropertyElementMain;
+    address.mElement = kAudioObjectPropertyElementMaster;
     
     CFStringRef name = nil;
     UInt32 propsize = sizeof(CFStringRef);

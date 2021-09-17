@@ -16,7 +16,7 @@
     AudioObjectPropertyAddress address;
     address.mSelector = kAudioHardwarePropertyDevices;
     address.mScope = kAudioObjectPropertyScopeGlobal;
-    address.mElement = kAudioObjectPropertyElementMain;
+    address.mElement = kAudioObjectPropertyElementMaster;
     
     OSStatus result = AudioObjectGetPropertyDataSize(kAudioObjectSystemObject,
                                                      &address,
